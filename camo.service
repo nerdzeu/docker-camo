@@ -1,0 +1,13 @@
+[Unit]
+Description=Camo containers
+After=docker.service
+
+[Service]
+Restart=always
+Type=simple
+WorkingDirectory=/home/host-user/camo/
+ExecStart=/usr/local/bin/docker-compose up --no-recreate
+ExecStop=/usr/local/bin/docker-compose stop
+
+[Install]
+WantedBy=multi-user.target
