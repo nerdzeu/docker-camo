@@ -1,6 +1,6 @@
 camo:
-    #build: .
-    image: nerdzeu/docker-camo
+    build: .
+    #image: nerdzeu/docker-camo
     ports:
         - "8081:8081"
     volumes:
