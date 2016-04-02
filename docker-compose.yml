@@ -4,4 +4,4 @@ camo:
     ports:
         - "8081:8081"
     volumes:
-        - camo:/home/camo
+        - ./camo:/home/camo

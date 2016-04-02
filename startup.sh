@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-export PATH="node-v4.1.2-linux-x64/bin:$PATH"
 
 if [ ! -d /home/camo/camo ]; then
     cd /home/camo
