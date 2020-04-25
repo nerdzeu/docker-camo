@@ -1,14 +1,12 @@
-FROM galeone/archlinux-updated-aur
+FROM node:14.0.0
 MAINTAINER Paolo Galeone <nessuno@nerdz.eu>
 
-RUN pacaur -Syu ca-certificates openssl git nodejs npm gcc-libs --noconfirm
+RUN git clone --recursive https://github.com/atmos/camo /opt/camo
+WORKDIR /opt/camo/
 
-USER root
-RUN useradd -m -s /bin/bash camo
+RUN npm install
+
+USER nobody
+ENTRYPOINT npm start
 
 EXPOSE 8081
-VOLUME /home/camo
-COPY startup.sh /opt/
-
-USER camo
-ENTRYPOINT bash /opt/startup.sh

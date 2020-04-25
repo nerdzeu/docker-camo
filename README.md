@@ -20,8 +20,3 @@ If you want to build the image:
 ```sh
 docker build -t <name> .
 ```
-
-# Environment variables
-1. Run docker-compose up to fetch the camo repo into the volume
-2. Run docker-compose stop
-3. Craete camo/env with the enviroment variables in the format `export VARIABLE=value`
